@@ -52,8 +52,7 @@ function createParticles() {
             speed: 0.05+Math.random()*0.04,
             targetSize: 1,
             fillColor: '#' + (Math.random() * 0x404040 + 0xaaaaaa | 0).toString(16),
-            //fillColor : '',
-            orbit: RADIUS*.5 + (RADIUS * .5 * Math.random())
+            orbit: RADIUS*.5 + (RADIUS * .5 * Math.random()),
         };
         
         particles.push( particle );
@@ -98,6 +97,10 @@ function windowResizeHandler() {
     canvas.width = SCREEN_WIDTH;
     canvas.height = SCREEN_HEIGHT;
 }
+
+/*function createTextField(heading){
+    document
+}*/
 
 function loop() {
     
