@@ -1,5 +1,5 @@
 var SCREEN_WIDTH = window.innerWidth;
-var SCREEN_HEIGHT = window.innerHeight;
+var SCREEN_HEIGHT = window.outerHeight;
 
 var RADIUS = 70;
 
@@ -33,7 +33,8 @@ function init() {
         window.addEventListener('resize', windowResizeHandler, false);
         
         createParticles();
-        
+        context.font = "30px Arial";
+        context.fillText("ROBOPRIX",10,50);
         windowResizeHandler();
         
         setInterval( loop, 1000 / 60 );
