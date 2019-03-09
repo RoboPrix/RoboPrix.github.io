@@ -39,7 +39,7 @@ body{
   font:15px Lato !important;
   text-transform:uppercase;
   color:#FFF !important;
-  letter-spacing:2px;
+  letter-spacing:5px;
   margin-top:0px;
 }
 
@@ -47,7 +47,7 @@ body{
   margin-bottom:0px;
   float: right;
   a{
-    font:500 11px Lato;
+    font:11px Lato !important;
     letter-spacing:2px;
     padding:16px !important;
     color:#a3bfc6 !important;
@@ -124,11 +124,21 @@ body{
     color:#EE445F !important;
     letter-spacing:10px;
     
+    
+}
+h3{
+    color:#fff;
+    font:20px Lato !important; 
+    letter-spacing: 7px; 
 }
 @media (max-width: 767px){
     .banner{
-        font:20px Lato !important;
+        font:25px Lato !important;
         margin-top: 450px;
+        
+    }
+    h3{
+        font:15px Lato !important;
     }
     .container1{
         height: 200px;
