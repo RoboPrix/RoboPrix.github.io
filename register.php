@@ -27,7 +27,7 @@ $teamMember7 = "";
 //Auto generated password 
 function generatePass(){
     $pass = "";
-    $characters = "ABCDE567890FGHIJKL1234MNOPQRSTUVWXYZ13456234567890abcdefg34567hijklmnopqr12356stuvw34789xyz";
+    $characters = "ABC456DE567890FGHIJKL1234MNO4656PQRSTU9879879VWXYZ";
     $characterslength = strlen($characters);
     for($i=0;$i<8;$i++){
         $pass .= $characters[rand(0,$characterslength - 1)];
@@ -36,29 +36,28 @@ function generatePass(){
 }
 
 //Retrieve details of the latest team
-$retrieveLatestTeamDetails = "SELECT team_reg_no from registered ORDER BY team_reg_no DESC LIMIT 1" ;
+$retrieveLatestTeamDetails = "SELECT reg_no from registered ORDER BY reg_no DESC LIMIT 1" ;
 $latestResult = mysqli_query($db,$retrieveLatestTeamDetails);
 
 if(!$latestResult){
     die("Could not fetch latest team data ".mysqli_error($db));
 }
-
 $latestTeam = mysqli_fetch_assoc($latestResult);
-$latestRegNo = $latestTeam['team_reg_no'];
+$latestRegNo = $latestTeam['reg_no'];
 
 //Auto generated registration number
 //Will check latest registration number in the DB and increment it and provide it to the current user
 function generateRegNo($latestRegNo){
-    $lastFour = substr($latestRegNo,-4);
-    $lastFour = (int)$lastFour;
-    $lastFour ++;
-    $lastFourUpdated = (string)$lastFour;
+    $lastFour = substr($latestRegNo,-3);
+    $lastFour = str_pad($lastFour + 1, 3, 0, STR_PAD_LEFT);
     
-    return "RP19".$lastFourUpdated;
+    return "RP19".$lastFour;//returns incremented registration number  
 }
 
 $password = generatePass();
 $teamRegNo = generateRegNo($latestRegNo);
-
+echo $teamRegNo;
+echo "<br>";
+echo $password;
 
 ?>
