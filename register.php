@@ -56,8 +56,6 @@ function generateRegNo($latestRegNo){
 
 $password = generatePass();
 $teamRegNo = generateRegNo($latestRegNo);
-echo $teamRegNo;
-echo "<br>";
-echo $password;
+
 
 ?>
