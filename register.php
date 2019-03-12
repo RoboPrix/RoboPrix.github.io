@@ -9,8 +9,7 @@ include('connect.php');
 //--------------------------------------------
 //          Team Registration
 //---------------------------------------------
-
-$eventName = ""; // Note : To be passed as a session_id
+$eventId = ""; // Note : To be passed as a session_id
 $teamName = "";
 $POCName = ""; 
 $POCNumber = "";
@@ -35,6 +34,12 @@ function generatePass(){
     return $pass;
 }
 
+//Retrieve evemt details
+$retrieveEventDetails = "SELECT * from events where id = '$eventId'";
+$eventResult = mysqli_query($db,$retrieveEventDetails);
+$event = mysqli_fetch_assoc($eventResult);
+$eventName = $event['event_name'];
+
 //Retrieve details of the latest team
 $retrieveLatestTeamDetails = "SELECT reg_no from registered ORDER BY reg_no DESC LIMIT 1" ;
 $latestResult = mysqli_query($db,$retrieveLatestTeamDetails);
@@ -46,7 +51,8 @@ $latestTeam = mysqli_fetch_assoc($latestResult);
 $latestRegNo = $latestTeam['reg_no'];
 
 //Auto generated registration number
-//Will check latest registration number in the DB and increment it and provide it to the current user
+//Will check latest registration number in the DB and increment it and provide it to the 
+//current user
 function generateRegNo($latestRegNo){
     $lastFour = substr($latestRegNo,-3);
     $lastFour = str_pad($lastFour + 1, 3, 0, STR_PAD_LEFT);
@@ -57,5 +63,20 @@ function generateRegNo($latestRegNo){
 $password = generatePass();
 $teamRegNo = generateRegNo($latestRegNo);
 
+if(isset($_POST['register'])){
+    $teamMember1 = mysqli_real_escape_string($db,$_POST['name1']);
+    $teamMember2 = mysqli_real_escape_string($db,$_POST['name2']);
+    $teamMember3 = mysqli_real_escape_string($db,$_POST['name3']);
+    $teamMember4 = mysqli_real_escape_string($db,$_POST['name4']);
+    $teamMember5 = mysqli_real_escape_string($db,$_POST['name5']);
+    $teamMember6 = mysqli_real_escape_string($db,$_POST['name6']);
+    $teamMember7 = mysqli_real_escape_string($db,$_POST['name7']);
+    $teamName = mysqli_real_escape_string($db,$_POST['teamName']);
+    $POCName = mysqli_real_escape_string($db,$_POST['POCName']);
+    $POCNumber = mysqli_real_escape_string($db,$_POST['POCNumber']);
+    $POCEmail = mysqli_real_escape_string($db,$_POST['POCEmail']);
+    $college = mysqli_real_escape_string($db,$_POST['college']);
+
+}
 
 ?>
