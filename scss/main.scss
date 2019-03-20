@@ -3,11 +3,11 @@ body{
 }
 
 .container1{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 45%;
+    left: 53%;
     margin: -150px 0 0 -150px;
   }
   
@@ -118,14 +118,32 @@ body{
 .banner{
     text-align: center;
     position: relative;
-    margin-top: 620px;
-    font:30px Lato !important;
+    margin-top: 400px;
+    font:20px Lato !important;
     text-transform:uppercase;
     color:#EE445F !important;
     letter-spacing:10px;
-    
-    
+    background:linear-gradient(90deg,#000,#fff,#000);
+    background-repeat: no-repeat;background-size: 80%;
+    animation:animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255,0.1);   
 }
+
+@keyframes animate{
+  0%{
+    background-position:-500%;
+
+  }
+  100%{
+    background-position:500%;
+  }
+}
+
+hr{
+  width:40%;
+}
+
 h3{
     color:#fff;
     font:20px Lato !important; 
@@ -141,8 +159,9 @@ h3{
         font:15px Lato !important;
     }
     .container1{
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
+        left:55%;
         position: absolute;
         margin: -100px 0 0 -100px;
       }
