@@ -1,4 +1,4 @@
-
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 .navbar-inverse{
   background:#222B31 !important;
   border-bottom:4px solid #EE445F !important;
@@ -105,21 +105,8 @@ h3{
     font:20px Lato !important; 
     letter-spacing: 7px; 
 }
-
-
-@media (max-width: 767px){
-    .banner{
-        font:25px Lato !important;
-        margin-top: 350px;
-        
-    }
-    h3{
-        font:15px Lato !important;
-    }
     
 
-
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
     background: #eee !important;
 }
