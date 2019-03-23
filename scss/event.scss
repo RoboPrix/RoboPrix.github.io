@@ -1,0 +1,221 @@
+
+
+.container1{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 45%;
+    left: 53%;
+    margin: -150px 0 0 -150px;
+  }
+  
+  .square{
+    height: 94%;
+    width: 94%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -47% 0 0 -47%;
+  }
+  
+  .black{ 
+    background: black;  
+    animation: rotate 10s infinite linear; 
+  }
+
+  @keyframes rotate{
+    0%{ transform: rotate(0deg); }
+      100%{ transform: rotate(360deg); }	
+  }
+.navbar-inverse{
+  background:#222B31 !important;
+  border-bottom:4px solid #EE445F !important;
+}
+
+.navbar-brand{
+  font:15px Lato !important;
+  text-transform:uppercase;
+  color:#FFF !important;
+  letter-spacing:5px;
+  margin-top:10px;
+}
+
+.nav{
+  margin-bottom:0px;
+  float: right;
+  a{
+    font:11px Lato !important;
+    letter-spacing:2px;
+    padding:16px !important;
+    color:#a3bfc6 !important;
+    text-transform:uppercase;
+    position:relative;
+    z-index:1000;
+  }
+  a:hover{
+    color:#FFF !important;
+  }
+  li{
+	position:relative;
+  }
+}
+
+.navbar-inverse .navbar-toggle{
+  border:none;
+}
+
+.navbar-collapse{
+  box-shadow:none !important;
+  border:none !important;
+}
+
+.navbar-inverse .navbar-toggle:hover{
+  background:transparent !important;
+}
+
+.navbar-inverse .navbar-toggle:focus{
+  background:transparent !important;
+}
+
+.navbar-inverse .navbar-toggle:active{
+  background:transparent !important;
+}
+
+.icon-bar{
+  background:#a3bfc6 !important;
+}
+
+.hover{
+  display:block;
+  position:absolute;
+  width:0%;
+  height:100%;
+  top:0px;
+  left:0px;
+  background:#EE445F !important;
+  z-index:0;
+  opacity:0;
+}
+
+@media (max-width: 767px) {
+.nav{
+    float:left;
+  padding-bottom:20px;
+  a{
+    padding:12px !important;
+  }
+}
+}
+
+@media (max-width: 480px) {
+  .nav{
+    padding-bottom:20px;
+  }
+}
+.banner{
+    text-align: center;
+    position: relative;
+    margin-top: 400px;
+    font:20px Lato !important;
+    text-transform:uppercase;
+    letter-spacing:10px;
+    background:linear-gradient(90deg,#000,#fff,#000);
+    background-repeat: no-repeat;background-size: 80%;
+    animation:animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255,0.1);   
+}
+
+@keyframes animate{
+  0%{
+    background-position:-500%;
+
+  }
+  100%{
+    background-position:500%;
+  }
+}
+
+hr{
+  width:40%;
+}
+
+h3{
+    color:#fff;
+    font:20px Lato !important; 
+    letter-spacing: 7px; 
+}
+
+
+@media (max-width: 767px){
+    .banner{
+        font:25px Lato !important;
+        margin-top: 350px;
+        
+    }
+    h3{
+        font:15px Lato !important;
+    }
+    .container1{
+        height: 150px;
+        width: 150px;
+        top:40%;
+        left:57%;
+        position: absolute;
+        margin: -100px 0 0 -100px;
+      }
+     .display-4{
+       margin-top:100px;
+     }
+}
+
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #EE445F;
+    border-color: #EE445F;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #EE445F;
+    border-color: #EE445F;
+}
+
+section {
+    margin-top:-70px;
+    padding: 40px 0;
+}
+
+section .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+    padding:40px;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #EE445F !important;
+    padding-top:10px;
+}
+
