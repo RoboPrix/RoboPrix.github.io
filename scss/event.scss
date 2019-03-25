@@ -1,4 +1,48 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body{
+  background: #eee !important;
+}
+.banner{
+  display:none;
+  visibility: hidden;
+  text-align: center;
+  position: relative;
+  padding:10%;
+  margin-top: 10%;
+  font:40px Lato !important;
+  text-transform:uppercase;
+  letter-spacing:10px;
+  background:linear-gradient(90deg,#fff,#000,#fff);
+  background-repeat: no-repeat;background-size: 80%;
+  animation:animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255,255,255,0.1); 
+}
+@keyframes animate{
+  0%{
+    background-position:-500%;
+
+  }
+  100%{
+    background-position:500%;
+  }
+}
+@media (max-width: 767px){
+  .banner{
+      font:25px Lato !important;
+      margin-top: 100px;
+      display:inline-block;
+      visibility: visible;
+      
+  }
+  h3{
+      font:15px Lato !important;
+  }
+   .display-4{
+     margin-top:100px;
+   }
+}
+
 .navbar-inverse{
   background:#222B31 !important;
   border-bottom:4px solid #EE445F !important;
@@ -80,6 +124,10 @@
 .display-4{
   padding-top:20%;
 }
+ #none{
+  display:none;
+  visibility: hidden;
+}
 }
 
 @media (max-width: 480px) {
@@ -143,11 +191,12 @@ section .section-title {
     border: none;
     background: #ffffff;
     padding:40px;
+    border-radius: 10px;
 }
 
 .frontside .card,
 .backside .card {
-    min-height: 312px;
+    min-height: 20px;
 }
 
 .frontside .card .card-title,
@@ -156,7 +205,150 @@ section .section-title {
     padding-top:10px;
 }
 
-#map{
+
+.card .contact{
   width:100%;
   height:300px;
+  background-color:#353535;
+}
+
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+  font-size: 30px;
+  
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 5px;
+	background: #EE445F;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+  padding-top: 15px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom:60px;
+	border-radius: 5px;
+	background: rgb(243, 114, 136);
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 15px;
+	font-size: 16px;
+}
+
+@media(max-width:767px){
+  #clockdiv{
+    font-size:20px;
+    margin-top:100px;
+  }
+  .frontside .card{
+    min-height:100px;
+  }
+  .Iam{
+    font: normal 10px/10px Montserrat, sans-serif;
+    display:none;
+    visibility:hidden;
+    
+  }
+  .Iam p{
+    float: center;
+  }
+  .Iam b{
+
+  }
+  .Iam .innerIam{
+
+  }
+}
+
+
+.Iam {
+  margin-top: 10%;
+  padding-left: 10em;
+  font: normal 40px/50px Montserrat, sans-serif;
+  color: #000;
+}
+.Iam p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
+  overflow: hidden;
+  height: 50px;
+  top: 40px;
+}
+.Iam .innerIam {
+  display: inline-block;
+  color: #e74c3c;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 5s;
+   -moz-animation:move 5s;
+    -ms-animation:move 5s;
+     -o-animation:move 5s;
+        animation:move 5s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:1s;
+   -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+     -o-animation-delay:1s;
+        animation-delay:1s;
+}
+@keyframes move{
+0%  { top: 0px; }
+20% { top: -50px; }
+40% { top: -100px; }
+60% { top: -150px; }
+80% { top: -200px; }
+}
+
+@-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
 }
