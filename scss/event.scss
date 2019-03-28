@@ -1,4 +1,8 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+$yellow:#EE445F;
+$black:#000000;
+$grey:#cccccc;
+
 body{
   background: #eee !important;
 }
@@ -254,6 +258,7 @@ section .section-title {
     min-height:100px;
   }
 
+
 }
 
 
@@ -268,7 +273,7 @@ section .section-title {
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 800px;
 }
 
 @media (max-width:991px) {
@@ -325,9 +330,11 @@ section .section-title {
 
 .covertext {
   position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
-  top: 350px; /* The distance between the div with the top of document */
+  top: 400px; /* The distance between the div with the top of document */
   left: 0px; /* Make the div full width */
   right: 0px; /* Make the div full width */
+  
+  
 }
 
 .title {
@@ -339,11 +346,12 @@ section .section-title {
   letter-spacing: 10px;
 }
 
-.subtitle {
-  font-family: Verdana;
-  font-size: 23px;
-  color: #ffffff;
-  text-align: center;
+
+
+@media(max-width:767px){
+  .covertext{
+    top:300px;
+  }
 }
 
 /* width */
@@ -367,3 +375,4 @@ section .section-title {
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
+
