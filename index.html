@@ -14,6 +14,9 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href= "https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:700,700italic' rel='stylesheet' type='text/css'>
+<script src="js/animate.js"></script>
 <style >
 html{
   font-family: sans-serif;
@@ -62,17 +65,44 @@ html{
         </script>
         <div class="covertext">
           <div class="col-lg-10" style="float:none; margin:0 auto;">
-            <h1 class="title">ROBOPRIX 2019</h1>
+            <!--<h1 class="area">ROBOPRIX</h1>-->
+            <div  id="container">
+                <div onmouseover="setStatus('computing')" onmouseout="setStatus('')" id="bot" class="neutral">
+                  <div id="head">
+                    <div id="left-ear">
+                      <div id="left-ear-inner"></div>
+                    </div>
+                    <div id="face">
+                      <div id="eyes">
+                        <div id="left-eye"></div>
+                        <div id="right-eye"></div>
+                      </div>
+                      <div id="mouth"></div>
+                    </div>
+                    <div id="right-ear">
+                      <div id="right-ear-inner"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
+      <script>
+      function setStatus(newstatus)
+{
+  $("#bot").removeClass("speaking thinking listening computing");
+  $("#bot").addClass(newstatus);
+}
+      </script>
 <br>
-<div style="text-align: center;padding-top:5%;" >
-  <h1 style="font-size:25px" >BEGINS IN</h1>
-    <hr><br><br>
-</div>
+
 <section  id="team" class="pb-5">
 	<div class="container">
+      <div style="text-align: center;margin-top:100px;" >
+          <h1 style="font-size:35px;" >BEGINS IN</h1>
+            <hr style="border: 1px solid red;"><br><br>
+        </div> 
 	<div class="row">
 	<!-- Event -->
 	<div class="col-xs-36 col-sm-18 col-md-12">

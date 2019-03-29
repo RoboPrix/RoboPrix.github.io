@@ -271,9 +271,11 @@ section .section-title {
 
 .carousel .background {
   background-position: center center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 800px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  height: 650px;
 }
 
 @media (max-width:991px) {
@@ -330,7 +332,7 @@ section .section-title {
 
 .covertext {
   position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
-  top: 400px; /* The distance between the div with the top of document */
+  top: 300px; /* The distance between the div with the top of document */
   left: 0px; /* Make the div full width */
   right: 0px; /* Make the div full width */
   
@@ -376,3 +378,232 @@ section .section-title {
   background: #b30000; 
 }
 
+.area {
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  letter-spacing: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur 7s ease-out ;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+#bot
+{
+  top:-100px;
+  position: relative;
+  text-align: left;
+  width: 24em;
+  height: 24em;
+  min-width: 10em;
+  min-height: 10em;
+  /*border: 1px solid lightblue;*/
+  margin: auto auto;
+}
+@media(max-width:767px){
+  #bot{
+    width:20em;
+    height: 20em;
+  }
+}
+#head
+{
+  position: relative;
+  display: inline-block;
+  margin-top: 15%;
+  margin-left: 10%;
+  width: 80%;
+  height: 70%;
+  /*border : 1px solid yellow;*/
+}
+
+#face
+{
+  position: absolute;
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 100%;
+  height: 100%;
+  border: 0.4em solid #fff;
+  border-radius: 1.5em;
+  /*border : 1px solid red;*/
+}
+
+#left-ear, #right-ear
+{
+  position: absolute;
+  top: 30%;
+  width: 6%;
+  height: 25%;
+  border: 0.15em solid #fff;
+  background-color: lightgray;
+  border-radius: 0.1em;
+}
+
+#left-ear
+{
+  left: -6%;
+}
+
+#right-ear
+{
+  right: -6%;
+}
+
+#left-ear-inner, #right-ear-inner
+{
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 60%;
+  background-color: lightgray;
+  border-radius: 0.1em;
+}
+
+#left-ear-inner
+{
+  left: -150%;
+}
+
+#right-ear-inner
+{
+  right: -150%;
+}
+
+#eyes
+{
+  position: absolute;
+  width: 70%;
+  height: 20%;
+  margin-left: 16%; /* 16 */
+  margin-top: 20%; /* 20 */
+  /*border : 1px solid lightseagreen;*/
+}
+
+#left-eye, #right-eye
+{
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0.5em;
+  /*border: 0.15em solid #FFF;*/
+}
+
+ #right-eye
+{
+  right: 0%;
+}
+
+#mouth
+{
+  position: absolute;
+  width: 30%;
+  height: 4%;
+  border-left: 0.2em solid #fff;
+  border-right: 0.2em solid #Fff;
+  border-bottom: 0.2em solid #fff;
+  border-top: 0.0em solid #fff;
+  border-radius: 0.5em;
+  left: 35%;
+  bottom: 20%;
+}
+
+/* Animations */
+#bot.neutral #left-eye, #bot.neutral #right-eye
+{
+   animation: blink-eyes 3s infinite ease-in alternate;
+   animation-delay: 2s;
+}
+
+#bot.neutral #left-ear-inner
+{
+   animation: move-left-ear-inner 5.0s infinite ease alternate;
+}
+
+#bot.neutral #right-ear-inner
+{
+   animation: move-right-ear-inner 5.0s infinite ease alternate;
+}
+
+@keyframes blink-eyes {
+  0%   { height: 10%; margin-top: 10%}
+  10% { height: 100%; margin-top: 0%}
+  100% { height: 100%; margin-top: 0%}
+}
+
+/* Computing */
+#bot.computing #left-eye, #bot.computing #right-eye
+{
+  height: 100%;
+  width: 25%;
+  border-radius: 100%;
+  transition : all 0.25s linear;
+  border: 0.3em dashed #EE445F;
+  animation-delay: 0.5s;
+  background-color: ;
+}
+
+#bot.computing #left-eye
+{
+  animation: border-dance 1s infinite linear reverse;
+}
+
+#bot.computing #right-eye
+{
+  border-color: #EE445F;
+  animation: border-dance 1s infinite linear;
+}
+
+#bot.computing #face, 
+#bot.computing #left-ear, #bot.computing #right-ear,
+#bot.computing #left-ear-inner, #bot.computing #right-ear-inner
+{
+   border-color: #fff;
+   transition : border-color 0.25s linear;
+}
+
+#bot.computing #left-ear, #bot.computing #right-ear,
+#bot.computing #left-ear-inner, #bot.computing #right-ear-inner
+{
+   background-color: #fff;
+   transition : background-color 0.25s linear;
+   animation: none;
+}
+
+#bot.computing #mouth
+{
+  border: 0.5em solid #fff;
+  width: 10%;
+  left: 45%;
+}
+
+@keyframes border-dance {
+  100% { 
+      transform: rotateZ(360deg); 
+    }
+}
