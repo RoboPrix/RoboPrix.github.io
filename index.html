@@ -65,26 +65,34 @@ html{
         </script>
         <div class="covertext">
           <div class="col-lg-10" style="float:none; margin:0 auto;">
-            <!--<h1 class="area">ROBOPRIX</h1>-->
-            <div  id="container">
-                <div onmouseover="setStatus('computing')" ontouchstart="setStatus('computing')" onmouseout="setStatus('')" id="bot" class="neutral">
-                  <div id="head">
-                    <div id="left-ear">
-                      <div id="left-ear-inner"></div>
-                    </div>
-                    <div id="face">
-                      <div id="eyes">
-                        <div id="left-eye"></div>
-                        <div id="right-eye"></div>
-                      </div>
-                      <div id="mouth"></div>
-                    </div>
-                    <div id="right-ear">
-                      <div id="right-ear-inner"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <svg viewBox="0 0 1800 600">
+                  <symbol id="s-text">
+                    
+                    <text text-anchor="middle"
+                          x="50%"
+                          y="68%"
+                          class="text--line"
+                          >
+                     ROBOPRIX
+                    </text>
+                    
+                  </symbol>
+                  
+                  <g class="g-ants">
+                    <use xlink:href="#s-text"
+                      class="webcoderskull-1"></use>     
+                    <use xlink:href="#s-text"
+                      class="webcoderskull-1"></use>     
+                    <use xlink:href="#s-text"
+                      class="webcoderskull-1"></use>     
+                    <use xlink:href="#s-text"
+                      class="webcoderskull-1"></use>     
+                    <use xlink:href="#s-text"
+                      class="webcoderskull-1"></use>     
+                  </g>
+                  
+                  
+                </svg>
           </div>
         </div>
       </div>
@@ -108,8 +116,8 @@ html{
 	<div class="col-xs-36 col-sm-18 col-md-12">
 			<div class="image-flip" >
 				<div class="mainflip">
-					<div  class="frontside">
-						<div style="background-image: url(img/bg/CircuitBackground_DARK.jpg)" class="card">
+					<div class="frontside">
+						<div style="background-image: url(img/bg/CircuitBackground_DARK.jpg);background-position: center center" class="card">
 							<div class="card-body text-center">
 								
 
