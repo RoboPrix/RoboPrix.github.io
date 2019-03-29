@@ -31,6 +31,10 @@ body{
     background-position:500%;
   }
 }
+
+#aboutheader{
+  text-align: center;padding:5%;margin-top:-30px;line-height: 60px;
+}
 @media (max-width: 767px){
   .banner{
       font:25px Lato !important;
@@ -44,6 +48,9 @@ body{
   }
    .display-4{
      margin-top:100px;
+   }
+   #aboutheader{
+     margin-top:-150px;
    }
 }
 
