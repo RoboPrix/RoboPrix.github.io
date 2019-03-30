@@ -404,8 +404,9 @@ svg {
   stroke: white;
   stroke-dasharray: 7% 28%;
   stroke-width: 10px;
-  -webkit-animation: stroke-offset 4s infinite linear;
-          animation: stroke-offset 4s infinite linear;
+  -webkit-animation: stroke-offset 10s infinite ease-in-out;
+          animation: stroke-offset 10s infinite ease-in-out;
+          
 }
 .webcoderskull-1:nth-child(1) {
   stroke: #fff;
@@ -432,6 +433,7 @@ svg {
   50% {
     stroke-dashoffset: 35%;
     stroke-dasharray: 0 87.5%;
+    
   }
 }
 
@@ -439,11 +441,12 @@ svg {
   50% {
     stroke-dashoffset: 35%;
     stroke-dasharray: 0 87.5%;
+  
   }
 }
 @media(max-width:767px){
   svg{
-    margin-top:-75%;
+    margin-top:-80%;
     font:20em/1 Arial;
   }
 }
