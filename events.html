@@ -43,7 +43,7 @@ body{
         </nav>
 	</div>  
     <div style="text-align: center;padding-top:10%;" class="jumbotron">
-		<h1 style="font-size:40px" class="display-4">Events This Time</h1>
+		<h1 style="font-size:40px" class="display-4">Have a look at the events we're organising this year</h1>
       <hr>
 	</div>
 	<section id="team" class="pb-5">
@@ -54,11 +54,10 @@ body{
 			<div class="image-flip" >
 				<div class="mainflip">
 					<div id="event1" class="frontside">
-						<div class="card"  >
+						<div style=" background: url('img/bg/giphy-quad.gif'); background-position:center center;background-repeat:no-repeat;" class="card"  >
 							<div class="card-body text-center">
-                <p><img calss="image-fluid" src="img/bg/quad.jpg" alt="drone" style="border-radius:20%;height:150px;width:150px;"></p>
-								<h2 class="card-title">Quadcopter</h2>
-                <p class="card-text"></p>
+                <!--<p><img class="image-fluid" src="img/bg/quad.jpg" alt="drone" style="border-radius:20%;height:150px;width:150px;"></p>-->
+								<h2  class="card-title">Quadcopter</h2>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
                     View More
                   </button>
@@ -75,12 +74,13 @@ body{
           
           <!-- Modal body -->
           <div class="modal-body">
+            <p><img class="image-fluid" src="img/events/IMG_7756.JPG" alt="quad" style="width:100%;position:center center"></p>
             Event description..
           </div>
           
           <!-- Modal footer 
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" >Register</button>
+            <button type="button" class="btn btn-danger" >Register +</button>
           </div>-->
           
         </div>
@@ -98,10 +98,10 @@ body{
 			<div class="image-flip" >
 				<div class="mainflip">
 					<div class="frontside">
-						<div class="card">
+						<div style=" background: url('img/bg/giphy-drag.gif'); background-position:center center;background-repeat:no-repeat;" class="card">
 							<div class="card-body text-center">
-                  <p><img calss="image-fluid" src="img/bg/drag.png" alt="drone" style="height:150px;width:250px;"></p>
-								<h2 class="card-title">Drag Race</h2>
+                  <!--<p><img calss="image-fluid" src="img/bg/drag.png" alt="drone" style="height:150px;width:250px;"></p>-->
+								<h2 class="card-title" >Drag Race</h2>
                 <p class="card-text"></p>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
                     View More
@@ -119,6 +119,7 @@ body{
           
           <!-- Modal body -->
           <div style="text-align:left" class="modal-body">
+          <p><img class="image-fluid" src="img/events/IMG_7539.JPG" alt="DR" style="width:100%;position:center center"><br><br>
               <strong>ARENA SPECIFICATIONS : </strong> OUTDOOR <br> 
               <strong>Three Levels : </strong><br>
               ● Level 1 : Concrete<br>
@@ -214,14 +215,21 @@ body{
            <!-- Register button -->
            <div class="modal-footer">
               <div style="text-align:left">
-                <input type="checkbox" id="termsChkbx " onchange="isChecked(this, 'sub2')" /> <strong>I agree with the terms of this event.</strong>
+                <input type="checkbox" id="termsChkbx " /> <strong>I agree with the terms of this event.</strong>
               </div>  
-              <button type="button" name="event2" class="btn btn-danger" id="sub2" disabled="disabled">Register</button>
+              <br>
+              <div style="text-align:center">
+              <input type="submit" name="event2" class="btn btn-danger" value="Register for Light Weight (5-15 KG) + " disabled="disabled"><br><br>
+              <input type="submit" name="event3" class="btn btn-danger" value="Register for Heavy Weight (15-30 KG) +" disabled="disabled">
+              </div>
             </div>
+            
             <script>
-            function isChecked(checkbox, sub2) {
-                document.getElementById(sub2).disabled = !checkbox.checked;
-            }
+            var checkboxes = $("input[type='checkbox']"),
+                submitButt = $("input[type='submit']");
+            checkboxes.click(function() {
+                submitButt.attr("disabled", !checkboxes.is(":checked"));
+            });
             </script>
           
         </div>
@@ -239,9 +247,9 @@ body{
 			<div class="image-flip" >
 				<div class="mainflip">
 					<div class="frontside">
-						<div class="card">
+            <div style=" background: url('img/bg/giphy_obstacle.gif'); background-position:center center;background-repeat:no-repeat;" class="card">
 							<div class="card-body text-center">
-                  <p><img calss="image-fluid" src="img/bg/OR1.jpg" alt="drone" style="border-radius:20%;height:150px;width:200px;"></p>
+                  <!--<p><img calss="image-fluid" src="img/bg/OR1.jpg" alt="drone" style="border-radius:20%;height:150px;width:200px;"></p>-->
 								<h2 class="card-title">Obstacle Race</h2>
                 <p class="card-text"></p>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
@@ -261,6 +269,7 @@ body{
           
           <!-- Modal body -->
           <div style="text-align:left" class="modal-body">
+          <p><img class="image-fluid" src="img/events/IMG_7834.JPG" alt="OR" style="width:100%;position:center center"><br><br>
               <strong>ARENA SPECIFICATIONS : </strong>  (Not decided)<br><br>
               <strong>REGISTRATION FEE : </strong> (not decided)<br><br>
               <strong>PRIZE MONEY : </strong> (not decided)<br><br>
@@ -400,7 +409,7 @@ body{
             <div style="text-align:left">
               <input type="checkbox" id="termsChkbx " onchange="isChecked(this, 'sub3')" /> <strong>I agree with the terms of this event.</strong>
             </div>  
-            <button type="button" name="event3" class="btn btn-danger" id="sub3" disabled="disabled">Register</button>
+            <button type="button" name="event3" class="btn btn-danger" id="sub3" disabled="disabled">Register + </button>
           </div>
           <script>
           function isChecked(checkbox, sub3) {
@@ -422,9 +431,8 @@ body{
 			<div class="image-flip" >
 				<div class="mainflip">
 					<div class="frontside">
-						<div class="card">
+						<div style=" background: url('img/bg/giphy-lf.gif'); background-position:center center;background-repeat:no-repeat;" class="card">
 							<div class="card-body text-center">
-                  <p><img calss="image-fluid" src="img/bg/LF.png" alt="drone" style="height:150px;width:250px;"></p>
 								<h2 class="card-title">Line Follower</h2>
                 <p class="card-text"></p>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">
@@ -548,7 +556,7 @@ body{
             <div style="text-align:left">
               <input type="checkbox" id="termsChkbx " onchange="isChecked(this, 'sub4')" /> <strong>I agree with the terms of this event.</strong>
             </div>  
-            <button type="button" name="event4" class="btn btn-danger" id="sub4" disabled="disabled">Register</button>
+            <button type="button" name="event4" class="btn btn-danger" id="sub4" disabled="disabled">Register + </button>
           </div>
           <script>
           function isChecked(checkbox, sub4) {
