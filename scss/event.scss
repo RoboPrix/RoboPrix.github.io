@@ -293,7 +293,7 @@ section .section-title {
 }
 
 .carousel .background.a {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg/IMG_7302.JPG");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg/main.jpg");
 }
 
 .carousel .background.b {
@@ -346,6 +346,21 @@ section .section-title {
   
   
 }
+.date{
+  color:#EE445F;
+  text-align:center;
+  margin-top:-150;
+  font-family:Lato;
+}
+@media(width:768px){
+  .covertext{
+    top:0px;
+  }
+  .date{
+    margin-top:-300px;
+  }
+}
+
 
 .title {
   font-family: Lato;
@@ -622,3 +637,14 @@ input[type='radio']:checked:before {
   background-color: transparent !important;
 }
 
+#team .imageTop{
+  height:200px;
+  width:350px; 
+}
+
+@media(max-width:767px){
+  #team .imageTop{
+    height:150px;
+    width:250px;
+  }
+}
