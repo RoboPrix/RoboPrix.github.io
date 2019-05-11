@@ -1,0 +1,31 @@
+{
+  "name": "roboprix-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ehtesham599/RoboPrix.github.io.git"
+  },
+  "author": "Ehtesham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ehtesham599/RoboPrix.github.io/issues"
+  },
+  "homepage": "https://github.com/Ehtesham599/RoboPrix.github.io"
+}
