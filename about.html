@@ -16,6 +16,9 @@
 body{
 	font-family: sans-serif;
 }
+.card p{
+	color:rgb(40, 40, 40);
+}
 </style>
 <script src="js/navbar.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/scss" href="scss/main.scss"> 
@@ -36,18 +39,19 @@ body{
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li><a style="font-size: 16px;padding-top:16px" href="#">About</a><span class="hover1"></span></li>
-                    <li><a style="font-size: 16px;padding-top:16px" href="events.html">Events</a><span class="hover1"></span></li>
-                    <li><a style="font-size: 16px;padding-top:16px" href="rules.html">Rules & Regulations</a><span class="hover1"></span></li>
-                    <li><a style="font-size: 16px;padding-top:16px" href="contact.html">Contact</a><span class="hover1"></span></li>
+                    <li><a style="font-size: 16px;padding-top:16px" href="events.php">Events</a><span class="hover1"></span></li>
+                    <li><a style="font-size: 16px;padding-top:16px" href="forum.html">Community Forum</a><span class="hover1"></span></li>
+										<li><a style="font-size: 16px;padding-top:16px" href="contact.php">Contact</a><span class="hover1"></span></li>
+										<li><a style="font-size: 16px;padding-top:16px" href="login.php">Team Login</a><span class="hover"></span></li>
                   </ul>
                 </div>
             </div>
         </nav>
 	</div>  
-    <div style="text-align: center;padding:10%;" class="jumbotron">
+    <div style="text-align: center;padding:10%;background-color: rgb(40,40,40);color:#fff" class="jumbotron">
 		<h1 style="font-size:40px;" class="display-4">About</h1>
-		<hr>
-		<p class="lead">
+		<hr style="border: 1px solid #EE445F;">
+		<p class="lead" style='font-size:16px'>
 				Have you ever got a chance to prove yourself other than your regular academics? Here is your chance to get your robotic gears turning and prove yourself outside the classroom! The Robotics Club of VITCC is a group of young minds, bonded together by our common interest and enthusiasm in the field of robotics.
 
 				We present RoboPrix with the same passion and dedication in order to ignite and inspire engineering aspirants, especially in the field of robotics, to prove and improve their skills in mechatronics. We have in store a plethora of competitions which aim at testing the designing, efficiency, accuracy and functioning of the competing robots, both in hardware as well as software.
@@ -56,12 +60,13 @@ body{
 		</p>
 		<br>
 		<p class="lead">
-			<a  class="btn btn-danger btn-lg" href="http://www.vitccroboticsclub.com/" role="button">Learn more</a>
+			<a  class="btn btn-danger btn-md" href="http://www.vitccroboticsclub.com/" role="button">Learn more</a>
 		</p>
 	</div>
-	<section id="team" class="pb-5">
+	<section style="background-color: rgb(40,40,40);" id="team" class="pb-5">
 	<div class="container">
-	<h5 class="section-title h1">OUR TEAM</h5>
+	<h5 class="section-title h2">OUR AMAZING TEAM</h5>
+	<hr style="border: 1px solid #EE445F;"><br>
 	<div class="row">
 	<!-- Faculty Advisor -->
 	<div class="col-xs-12 col-sm-6 col-md-4">
@@ -81,7 +86,7 @@ body{
 					<div class="backside">
 						<div class="card">
 							<div class="card-body text-center mt-4">
-								<blockquote><p  class="quotation">A quote will be added here.</p></blockquote>
+								<blockquote><p  class="quotation">Man needs his difficulties because they are necessary to enjoy success.</p></blockquote>
 							</div>
 						</div>
 					</div>
