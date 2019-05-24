@@ -175,6 +175,7 @@ section .section-title {
     /*color: #fff;*/
     padding:40px;
     box-shadow:0px 5px 5px 0px #000;
+    border-radius:20px;
 }
 
 .image-flip:hover .backside,
@@ -220,7 +221,7 @@ section .section-title {
     position: absolute;
     top: 0;
     left: 0;
-    background: white;
+    background: rgb(40,40,40);
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
