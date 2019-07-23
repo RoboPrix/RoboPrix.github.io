@@ -377,16 +377,16 @@ section .section-title {
 }
 
 .carousel .background.a {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/bg/11-01.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg/11-01.jpg");
 }
-
+/*
 .carousel .background.b {
-  /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0699.JPG");*/
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0699.JPG");
 }
 
 .carousel .background.c {
-  /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0442.JPG");*/
-}
+  /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0442.JPG");
+}*/
 
 .carousel-fade .carousel-inner .item {
   opacity: 0;
