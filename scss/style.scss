@@ -57,7 +57,7 @@ body{
 }
 
 .navbar-inverse{
-  background:#222B31 !important;
+  background:rgb(40,40,40) !important;
   border-bottom:4px solid #EE445F !important;
 }
 
@@ -157,8 +157,37 @@ body{
   }
 }
 
+
 hr{
   width:40%;
+  animation-duration: 2s;
+  animation-name: fadeInRight;
+}
+@-webkit-keyframes fadeInRight{
+  0%{
+      opacity:0;
+      -webkit-transform:translateX(200px);
+      transform:translateX(200px)
+  }
+  100%{
+      opacity:1;
+      -webkit-transform:translateX(0);
+      transform:translateX(0)
+  }
+}
+@keyframes fadeInRight{
+  0%{
+      opacity:0;
+      -webkit-transform:translateX(200px);
+      -ms-transform:translateX(200px);
+      transform:translateX(200px)
+  }
+  100%{
+      opacity:1;
+      -webkit-transform:translateX(0);
+      -ms-transform:translateX(0);
+      transform:translateX(0)
+  }
 }
 
 h3{
@@ -205,6 +234,7 @@ section .section-title {
     padding:40px;
     border-radius: 20px;
     transition: 0.2s;
+    
    /* box-shadow:0px 10px 10px 0px rgb(112, 112, 112);*/
     
 }
@@ -336,7 +366,7 @@ section .section-title {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  height: 650px;
+    min-height: 100%;
 }
 
 @media (max-width:991px) {
@@ -347,15 +377,15 @@ section .section-title {
 }
 
 .carousel .background.a {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/bg/lights.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/main2.jpg");
 }
 
 .carousel .background.b {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0699.JPG");
+  /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0699.JPG");*/
 }
 
 .carousel .background.c {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0442.JPG");
+  /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/IMG_0442.JPG");*/
 }
 
 .carousel-fade .carousel-inner .item {
@@ -390,7 +420,7 @@ section .section-title {
     transform: translate3d(0, 0, 0);
   }
 }
-/* CSS Hack to trigger GPU for smooth transition */
+
 
 .covertext {
   position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
@@ -468,7 +498,7 @@ section .section-title {
 
 svg {
   position: relative;
-  margin-top:-30%;
+  margin-top:-25%;
   width: 100%;
   height: 100%;
   
@@ -579,6 +609,7 @@ input[type='radio']:checked:before {
   page-break-inside: avoid; /* For Firefox. */
   -webkit-column-break-inside: avoid; /* For Chrome & friends. */
   break-inside: avoid; /* For standard browsers like IE. :-) */
+  box-shadow: 0px 5px 5px 0px #000;
 }
 
 .gallery img:hover {
@@ -586,6 +617,7 @@ input[type='radio']:checked:before {
   -webkit-filter: grayscale(0);
   filter:none;
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 /* .modal {
@@ -690,6 +722,7 @@ border: none;
 .statis {
   color: #EEE;
   margin-top: 15px;
+  font-family: 'Lobster', cursive;
   
 }
 .statis .box:hover{
@@ -702,6 +735,7 @@ border: none;
   margin-bottom: 25px;
   transition:0.2s;
   border-radius: 20px;
+  box-shadow: 0px 5px 5px 0px #000;
 }
 .statis .box h3:after {
   content: "";
@@ -781,7 +815,7 @@ border: none;
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg);}
 }
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
@@ -793,4 +827,9 @@ border: none;
 	height: 100%;
 	z-index: 9999;
 	background: url('../img/bg/Preloader_10.gif') center no-repeat #fff;
+}
+
+.copyright{
+  color:#fff;
+  font-family: 'Lobster' cursive;
 }

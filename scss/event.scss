@@ -173,11 +173,11 @@ h3{
 }
 
 .btn-primary:hover,.btn-primary:focus{
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #EE445F;
+    border-color: #EE445F;
     box-shadow: none;
     outline: none;
-    color:#000;
+    transform: scale(1.1);
 }
 
 .btn-primary {
@@ -185,6 +185,7 @@ h3{
     background-color: #EE445F;
     border-color: #EE445F;
     outline:none;
+    transition: 0.2s;
     text-decoration: none;
 }
 
@@ -213,23 +214,23 @@ section .section-title {
   background: #ffffff;
   padding:40px;
   transition: 0.5s;
-  background-color:rgb(73,42,69);
+  background-color:rgb(0,0,0);
   border-radius: 20px;
   line-height: 25px;
-
- /* box-shadow:0px 10px 10px 0px rgb(112, 112, 112);*/
+  box-shadow:0px 10px 10px 0px rgb(27, 27, 27);
   
 }
-
+/*
 #team1 #quad .card {
   border: none;
   background: #ffffff;
   padding:40px;
   transition: 0.5s;
-  background-color:rgb(73,42,69);
- /* box-shadow:0px 10px 10px 0px rgb(112, 112, 112);*/
+  background-color:rgb(0,0,0);
+ /* box-shadow:0px 10px 10px 0px rgb(112, 112, 112);
   
 }
+/*
 #team1 #quad .card:hover{
   background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../img/bg/Drone.gif');
   background-position: center center;
@@ -241,7 +242,7 @@ section .section-title {
   padding:40px;
   transition: 0.5s;
   background-color:rgb(73,42,69);
- /* box-shadow:0px 10px 10px 0px rgb(112, 112, 112);*/
+ /* box-shadow:0px 10px 10px 0px rgb(112, 112, 112);
   
 }
 #team1 #drag .card:hover{
@@ -249,7 +250,7 @@ section .section-title {
   background-position: center center;
   background-repeat: no-repeat;
 }
-
+*/
 
 .frontside .card,
 .backside .card {
@@ -264,8 +265,6 @@ section .section-title {
     color: #EE445F !important;
     padding-top:10px;
 }
-
-
 
 
 #clockdiv{
@@ -653,6 +652,7 @@ input[type='radio']:checked:before {
 }
 .card tr{
   margin-top:10px;
+  border-bottom: 1px solid #eee;
 }
 .card th{
   text-align:center;
@@ -668,4 +668,58 @@ input[type='radio']:checked:before {
   .card td,.card th{
     font-size:10px;
   }
+}
+
+.statis {
+  color: #EEE;
+  margin-top: 15px;
+  font-family: 'Lobster', cursive;
+  
+}
+.statis .box:hover{
+  transform: scale(1.1);
+}
+.statis .box {
+  position: relative;
+  padding: 25px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  transition:0.2s;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px 0px #000;
+}
+.statis .box h3:after {
+  content: "";
+  height: 2px;
+  width: 70%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.12);
+  display: block;
+  margin-top: 10px;
+}
+.statis .box i {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  font-size: 30px;
+  padding: 15px;
+  top: -25px;
+  left: -25px;
+  background-color: rgba(255, 255, 255, 0.15);
+  line-height: 60px;
+  text-align: right;
+  border-radius: 50%;
+}
+
+#box1{
+  background-color: #EE445F;
+}
+#box2{
+  background-color: rgb(120, 199, 3);
+}
+#box3{
+  background-color:rgb(175, 73, 153);
+}
+#box5{
+  background-color:rgb(73, 42, 69);
 }
